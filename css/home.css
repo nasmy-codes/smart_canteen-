@@ -1,0 +1,117 @@
+/* ==========================================================
+   SmartCanteen - Home page styles
+   ========================================================== */
+
+.bgimage {
+    height: 88vh;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.overlay h1 {
+    font-size: 56px;
+    margin-bottom: 16px;
+}
+
+.overlay p {
+    font-size: 17px;
+    margin-bottom: 26px;
+    max-width: 520px;
+}
+
+/* Popular meals */
+
+.featured {
+    padding: 70px 8%;
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #14532D;
+    font-size: 30px;
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.food-card {
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    padding: 16px 16px 4px;
+    color: #14532D;
+}
+
+.food-card p {
+    padding: 0 16px 16px;
+    color: #555;
+}
+
+.food-card .btn {
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+}
+
+/* Why us strip */
+
+.why-us {
+    background: white;
+    padding: 60px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.why-us .item {
+    max-width: 260px;
+}
+
+.why-us .item h4 {
+    color: #14532D;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.why-us .item p {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .overlay h1 { font-size: 38px; }
+}

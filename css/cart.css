@@ -1,0 +1,315 @@
+/* ==========================================================
+   SmartCanteen - Cart / Orders / Order-details styles
+   ========================================================== */
+
+.cart-page,
+.orders-page,
+.confirmation-page,
+.order-detail-page {
+    width: 88%;
+    max-width: 1100px;
+    margin: 45px auto 70px;
+}
+
+.cart-page h1,
+.orders-page h1,
+.confirmation-page h1,
+.order-detail-page h1 {
+    color: #14532D;
+    font-size: 32px;
+}
+
+.page-description {
+    color: #666;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+/* Cart layout */
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 800px) {
+    .cart-container { grid-template-columns: 1fr; }
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cart-item {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-item-details {
+    flex: 1;
+    min-width: 140px;
+}
+
+.cart-item-details h3 {
+    color: #14532D;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.cart-item-details p {
+    color: #555;
+    font-size: 14px;
+}
+
+.qty-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-form input[type="number"] {
+    width: 54px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.qty-form button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #14532D;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.cart-item-total {
+    text-align: right;
+    min-width: 100px;
+}
+
+.cart-item-total p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #14532D;
+}
+
+.remove-btn {
+    border: none;
+    background: none;
+    color: #dc2626;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/* Summary */
+
+.cart-summary {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.cart-summary h2 {
+    color: #14532D;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.summary-row,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.summary-total {
+    font-size: 19px;
+    font-weight: 600;
+    color: #14532D;
+    border-top: 1px solid #eee;
+    padding-top: 14px;
+}
+
+.empty-cart {
+    text-align: center;
+    background: white;
+    padding: 60px 20px;
+    border-radius: 12px;
+    color: #666;
+}
+
+/* My orders search */
+
+.order-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.order-search input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.order-search button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #14532D;
+    color: white;
+    cursor: pointer;
+}
+
+/* Order cards */
+
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-header p {
+    font-size: 13px;
+    color: #777;
+}
+
+.order-header h3 {
+    color: #14532D;
+    margin-top: 5px;
+}
+
+.order-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 18px 0;
+}
+
+.order-details p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-footer p {
+    color: #777;
+    font-size: 13px;
+}
+
+.order-footer a {
+    color: #14532D;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Status badges (shared with admin) */
+
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-pending      { background: #fee2e2; color: #991b1b; }
+.status-preparing    { background: #fef3c7; color: #92400e; }
+.status-ready        { background: #dcfce7; color: #166534; }
+.status-completed    { background: #e0e7ff; color: #3730a3; }
+.status-cancelled    { background: #f3f4f6; color: #6b7280; }
+
+/* Order confirmation */
+
+.confirmation-box {
+    background: white;
+    border-radius: 14px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.confirmation-box .check {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
+
+.confirmation-box h2 {
+    color: #14532D;
+    margin-bottom: 8px;
+}
+
+.order-code-box {
+    display: inline-block;
+    background: #f0fdf4;
+    border: 1px dashed #14532D;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #14532D;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.order-detail-page table.data-table td:first-child {
+    font-weight: 600;
+    color: #374151;
+    width: 40%;
+}

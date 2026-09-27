@@ -1,0 +1,293 @@
+/* ==========================================================
+   SmartCanteen - Global Styles
+   (navbar, footer, buttons, forms, alerts, shared layout)
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8fafc;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+    background: #14532D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 6%;
+    flex-wrap: wrap;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #4ADE80;
+}
+
+.cart-link {
+    position: relative;
+    padding-right: 6px;
+}
+
+.cart-badge {
+    background: #dc2626;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 999px;
+    margin-left: 4px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    display: inline-block;
+    background: #14532D;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.btn:hover {
+    background: #22C55E;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #14532D;
+    color: #14532D;
+}
+
+.btn-outline:hover {
+    background: #14532D;
+    color: white;
+}
+
+.btn-danger {
+    background: #dc2626;
+}
+
+.btn-danger:hover {
+    background: #ef4444;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ---------- Page container / header ---------- */
+
+.page {
+    width: 88%;
+    max-width: 1150px;
+    margin: 45px auto;
+    min-height: 55vh;
+}
+
+.page-header h1 {
+    color: #14532D;
+    font-size: 32px;
+}
+
+.page-header p {
+    color: #666;
+    margin-top: 6px;
+    margin-bottom: 30px;
+}
+
+/* ---------- Alerts ---------- */
+
+.alert {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+/* ---------- Forms (login / register) ---------- */
+
+.form-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 60px 6% 80px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 34px 32px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.form-card h2 {
+    color: #14532D;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #14532D;
+}
+
+.form-footer-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-footer-link a {
+    color: #14532D;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ---------- Tables (shared by admin) ---------- */
+
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+
+table.data-table th,
+table.data-table td {
+    padding: 13px 16px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #eef0f2;
+}
+
+table.data-table th {
+    background: #14532D;
+    color: white;
+    font-weight: 600;
+}
+
+table.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    background: #14532D;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 820px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .navbar ul {
+        gap: 16px;
+    }
+}
